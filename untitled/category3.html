@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <link rel ="stylesheet" type="text/css" href="css/main.css" />
+  <link rel ="stylesheet" type="text/css" href="css/style1.css" />
+
+  <title>Онлайн-магазин товарів для дому</title>
+
+
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">The Witcher 3: Wild Hunt</div>
+      <nav class="nav">
+        <a class="nav__link" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">T-Shirts</a>
+        <a class="nav__link" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Games</a>
+        <a class="nav__link" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">About</a>
+
+        <button id="modalBtn" class="button1">
+          Корзина: <span id="fff"></span>
+        </button>      </nav>
+    </div>
+  </div>
+</header>
+<h1 class="main">
+    T-SHIRT
+</h1>
+<div class="list_of_supplies">
+  <ul class="list">
+    <li class="supply1">
+      <img src="img/242.png" class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 1
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <p class="new__price">
+          250 грн.
+        </p>
+        <button class="button" onclick="amounyInc()">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply2">
+      <img src="img/249.png" class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 2
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply3">
+      <img src="img/259.png" class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 3
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply1">
+
+      <img src="img/242.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 4
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <p class="new__price">
+          250 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply2">
+      <img src="img/249.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 5
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply3">
+      <img src="img/259.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 6
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply1">
+      <img src="img/242.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 7
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <p class="new__price">
+          250 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply2">
+      <img src="img/249.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 8
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply3">
+      <img src="img/259.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 9
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply1">
+
+      <img src="img/242.png"class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 10
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <p class="new__price">
+          250 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply2">
+      <img src="img/249.png" class="ddd" height="300" width="300" alt="c"/>
+      <a class="name"
+         href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8"
+         target="_blank">
+        T-Shirt 11
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+    <li class="supply3">
+      <img src="img/259.png" class="ddd" height="300" width="300" alt  = "c"/>
+      <a class="name" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+        T-Shirt 12
+      </a>
+      <div class="price__button">
+        <p class="price">
+          300 грн.
+        </p>
+        <button class="button">
+          Buy:
+        </button>
+        <div class="hidden">
+          Check our web-site
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div id="simpleModal" class="modal">
+  <div class = "modal-content">
+    <span class="closeBtn">&times;</span>
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+      <span class="cart-item cart-header cart-column">ITEM</span>
+      <span class="cart-price cart-header cart-column">PRICE</span>
+      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price">0 грн</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    Made by Boiko Danylo
+  </div>
+</footer>
+<script src = "11.js" defer></script>
+</body>
+</html>

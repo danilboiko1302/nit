@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+<body id="body">
+<div class="wrap" id="wrap">
+    <header class="head">
+        <div class="top">
+            <a href="index.html" style="min-width: 100%"> DO YOUR BEST </a>
+        </div>
+        <div class="row row-head text-right">
+            <div class="col-md-4 col-sm-12 media cart" style="padding-left: 100px">
+                <div class="container text-left" id="cartBtn">
+                    <a href="#"><i id="cartCount" class="fas fa-shopping-cart temp openCart">0</i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 text-center logo">
+
+            </div>
+            <div class="col-md-4 col-sm-12 text-right media social-media">
+                <ul class="media">
+                    <li id="instagram">
+                        <a href="https://instagram.com/boiko.official">
+                            <i class="fab fa-instagram temp">
+                            </i>
+                        </a>
+                    </li>
+                    <li id="twitter">
+                        <a href="https://instagram.com/boiko.official">
+                            <i class="fab fa-twitter temp"></i>
+                        </a>
+                    </li>
+                    <li id="facebook">
+                        <a href="https://instagram.com/boiko.official">
+                            <i class="fab fa-facebook-f temp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="categoriesList">Categories</label>
+        </div>
+        <select class="custom-select changeCat" id="categoriesList">
+            <option value="0" selected hidden disabled>Choose...</option>
+        </select>
+    </div>
+
+    <div class="row text-center" id="products">
+    </div>
+</div>
+<div id="curtain"></div>
+<div id="simpleModal" class="modal">
+    <div
+            id="cartPopup" class="cartPopup text-center">
+    </div>
+
+</div>
+<footer class="footer">
+   Boiko Danya
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7997b473-e600-4aef-9184-84f3bde6cf16" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QbG1erQhKQWIsgPp2Zs9EAIRYA" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/Даня/Laba04" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\danil\WebstormProjects\untitled\js\vendor" />
+      <recent name="C:\Users\danil\WebstormProjects\untitled" />
+      <recent name="C:\Users\danil\WebstormProjects\untitled\css" />
+      <recent name="C:\Users\danil\WebstormProjects\untitled\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danil\WebstormProjects\untitled\js" />
+      <recent name="C:\Users\danil\WebstormProjects\untitled\css" />
+      <recent name="C:\Users\danil\WebstormProjects\untitled\img" />
+      <recent name="C:\Users\danil\WebstormProjects\untitled" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7997b473-e600-4aef-9184-84f3bde6cf16" name="Default Changelist" comment="" />
+      <created>1568031669496</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568031669496</updated>
+      <workItem from="1568031674434" duration="766000" />
+      <workItem from="1568791295687" duration="1395000" />
+      <workItem from="1568794991319" duration="860000" />
+      <workItem from="1568805066684" duration="4607000" />
+      <workItem from="1568813774097" duration="1965000" />
+      <workItem from="1568884017993" duration="11848000" />
+      <workItem from="1568921184462" duration="138000" />
+      <workItem from="1568968997101" duration="2299000" />
+      <workItem from="1568974820093" duration="4734000" />
+      <workItem from="1569069187383" duration="4611000" />
+      <workItem from="1570130181507" duration="62000" />
+      <workItem from="1570374461040" duration="92000" />
+      <workItem from="1570629930999" duration="1786000" />
+      <workItem from="1571996254351" duration="7885000" />
+      <workItem from="1572259874186" duration="12306000" />
+      <workItem from="1572331786638" duration="57000" />
+      <workItem from="1572350098005" duration="6013000" />
+      <workItem from="1572381910642" duration="183000" />
+      <workItem from="1573497341106" duration="24000" />
+      <workItem from="1573506702531" duration="665000" />
+      <workItem from="1573508680607" duration="2068000" />
+      <workItem from="1573512503426" duration="1653000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
