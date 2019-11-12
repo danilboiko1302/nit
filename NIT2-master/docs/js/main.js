@@ -1,14 +1,55 @@
 var amount = 0;
+var u = [];
+var numbers = [];
+var c = [];
+var n = [], o = 1;
 var sel = document.getElementById('cartCount');
+if(numbers.length===0&&localStorage.getItem("number")!=null){
+
+   numbers = JSON.parse(localStorage.getItem("number"));
+   console.log(numbers)
+   var amountOf = document.getElementsByClassName('cart-quantity-input')
+   console.log(amountOf)
+   for (var i = 0; i < amountOf.length; i++) {
+       amountOf[i].value = numbers[i].toString();
+   }
+}
+if(u.length===0&&localStorage.getItem("cart")!=null){
+    u = JSON.parse(localStorage.getItem("cart"));
+    copy()
+    for (var i = 0, o = 0; o < u.length; o++) {
+        for (var l = 0, a = 0; a < c.length; a++)
+            u[o].id === c[a].id && l++;
+        u[o].count = l;
+        i = null != u[o].special_price ? u[o].special_price : u[o].price;
+        //     console.log(u[o])
+        addItem(u[o].name,i,u[o].image_url);
+       // blyat();
+      //  updateCartTotal();
+
+    }
+    var t = document.getElementById("cartPopup");
+    t.innerHTML += '<div class="send"><p class="form">Your name</p>' +
+        '<input type="text" id="name"><p class="form">Your email</p><input type="text" id="email">' +
+        '<p class="form">Your phone number</p><input type="text" id="phone"> <br><button type="submit" ' +
+        'class="btn red-button submit"> Submit </button> </div>'
+}
+function copy() {
+    for (var h = 0; h < u.length; h++) {
+        c.push(u[h]);
+    }
+}
+
+
+check();
+updateCartTotal();
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', check)
 } else {
-    if(u.length===0&&localStorage.getItem("asd")!=null)
-        u = JSON.parse(localStorage.getItem("asd"));
-    check()
+
 }
-var sjvfgjds = 0;
-var numbers = [];
+
 function blyat() {
     var numbers1 = [];
     var amountOf = document.getElementsByClassName('cart-quantity-input')
@@ -38,8 +79,7 @@ function check() {
        remove[i].addEventListener('click', function (event) {
            amount--;
            sel.innerHTML=amount;
-           var items = document.getElementsByClassName('cart-items')[0]
-           var itemNames = items.getElementsByClassName('cart-item-title')
+
            for(var j =0; j<c.length;j++)
            {
                var ts = event.target;
@@ -66,9 +106,23 @@ function check() {
     }
 }
 function removeItem(event) {
-    console.log(123123)
     amount--;
     sel.innerHTML=amount;
+
+    for(var j =0; j<c.length;j++)
+    {
+        var ts = event.target;
+        var hhh = ts.parentElement.parentElement;
+        ts = hhh.getElementsByClassName("cart-item-title")[0].innerHTML;
+        if (ts === c[j].name) {
+            if(c.length===1){
+                c={};
+                u={};
+            }
+            deleteA(j);
+        }
+
+    }
     event.target.parentElement.parentElement.remove()
     updateCartTotal()
 }
@@ -94,7 +148,12 @@ function updateCartTotal() {
         input.addEventListener('change', amountChange)
     }
     for ( i = 0; i < amountOf.length; i++) {
-        amountOf[i].value = numbers[i];
+        try{
+            amountOf[i].value = numbers[i].toString();
+        }catch (e) {
+            console.log(e)
+        }
+
     }
     var item = document.getElementsByClassName('cart-items')[0];
     var rows = item.getElementsByClassName('cart-row');
@@ -118,7 +177,9 @@ function updateCartTotal() {
     for(var tt=1;tt<send.length;tt++){
         send[tt].remove();
     }
-    localStorage.setItem("asd", JSON.stringify(u));
+    blyat()
+    localStorage.setItem("number", JSON.stringify(numbers));
+    localStorage.setItem("cart", JSON.stringify(u));
 }
 function addItem(title, price, imageSrc) {
     var row = document.createElement('div')
@@ -263,7 +324,6 @@ var e = {};
                                 u[o].id === c[a].id && l++;
                              u[o].count = l;
                             i = null != u[o].special_price ? u[o].special_price : u[o].price;
-                           //     console.log(u[o])
                            addItem(u[o].name,i,u[o].image_url);
                            blyat();
                             updateCartTotal();
@@ -327,10 +387,7 @@ var e = {};
     };
 
 }]);
-var c = [];
-var u = [];
 
-var n = [], o = 1;
 window.addEventListener('click', function (e) {
    // check();
     updateCartTotal();
