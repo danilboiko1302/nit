@@ -3,36 +3,66 @@ var sel = document.getElementById('cartCount');
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', check)
 } else {
+    if(u.length===0&&localStorage.getItem("asd")!=null)
+        u = JSON.parse(localStorage.getItem("asd"));
     check()
 }
-
-function check() {
-    var add = document.getElementsByClassName('button')
-    for (var i = 0; i < add.length; i++) {
-        var btn = add[i];
-        btn.onclick = function(event){
-            var parentElement = event.target.parentElement.parentElement;
-            var name = parentElement.getElementsByClassName('name')[0].innerText;
-            var price;
-            try {
-                price = parentElement.getElementsByClassName('new__price')[0].innerText;
-            }catch (e) {
-                price = parentElement.getElementsByClassName('price')[0].innerText;
-            }
-            var image = parentElement.getElementsByClassName('ddd')[0].src;
-            var remove = document.getElementsByClassName('btn-danger')
-            for (var i = 0; i < remove.length; i++) {
-                var button = remove[i];
-                button.addEventListener('click', removeItem);
-            }
-            var amountOf = document.getElementsByClassName('cart-quantity-input')
-            for (var i = 0; i < amountOf.length; i++) {
-                var input = amountOf[i]
-                input.addEventListener('change', amountChange)
-            }
-            addItem(name, price, image);
-            updateCartTotal();
+var sjvfgjds = 0;
+var numbers = [];
+function blyat() {
+    var numbers1 = [];
+    var amountOf = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < amountOf.length; i++) {
+        numbers1.push(parseInt(amountOf[i].value));
+    }
+    numbers = numbers1;
+}
+function deleteA(a) {
+    var test = [];
+    var test1 = [];
+    var test2 = [];
+    for(var i = 0; i<u.length;i++){
+        if(i!==a){
+            test.push(u[i]);
+            test1.push(c[i]);
+            test2.push(numbers[i]);
         }
+    }
+    u = test;
+    c = test1;
+    numbers=test2
+}
+function check() {
+   var remove = document.getElementsByClassName('btn-danger');
+   for(var i = 0; i<remove.length;i++){
+       remove[i].addEventListener('click', function (event) {
+           amount--;
+           sel.innerHTML=amount;
+           var items = document.getElementsByClassName('cart-items')[0]
+           var itemNames = items.getElementsByClassName('cart-item-title')
+           for(var j =0; j<c.length;j++)
+           {
+               var ts = event.target;
+               var hhh = ts.parentElement.parentElement;
+               ts = hhh.getElementsByClassName("cart-item-title")[0].innerHTML;
+                   if (ts === c[j].name) {
+                       if(c.length===1){
+                           c={};
+                           u={};
+                       }
+                       deleteA(j);
+                   }
+
+           }
+           event.target.parentElement.parentElement.remove()
+           updateCartTotal()
+       });
+   }
+    var amountOf = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < amountOf.length; i++) {
+        var input = amountOf[i];
+
+        input.addEventListener('change', amountChange)
     }
 }
 function removeItem(event) {
@@ -43,13 +73,16 @@ function removeItem(event) {
     updateCartTotal()
 }
 function amountChange(event) {
+
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         removeItem(event);
     }
+    blyat();
     updateCartTotal()
 }
 function updateCartTotal() {
+
     var remove = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < remove.length; i++) {
         var button = remove[i];
@@ -59,6 +92,9 @@ function updateCartTotal() {
     for (var i = 0; i < amountOf.length; i++) {
         var input = amountOf[i]
         input.addEventListener('change', amountChange)
+    }
+    for ( i = 0; i < amountOf.length; i++) {
+        amountOf[i].value = numbers[i];
     }
     var item = document.getElementsByClassName('cart-items')[0];
     var rows = item.getElementsByClassName('cart-row');
@@ -78,6 +114,11 @@ function updateCartTotal() {
         amount +=Number.parseInt( test[g].value);
     }
     sel.innerHTML=amount;
+    var send = document.getElementsByClassName('send');
+    for(var tt=1;tt<send.length;tt++){
+        send[tt].remove();
+    }
+    localStorage.setItem("asd", JSON.stringify(u));
 }
 function addItem(title, price, imageSrc) {
     var row = document.createElement('div')
@@ -86,7 +127,7 @@ function addItem(title, price, imageSrc) {
     var itemNames = items.getElementsByClassName('cart-item-title')
     for (var i = 0; i < itemNames.length; i++) {
         if (itemNames[i].innerText === title) {
-            alert('Sorry, this item is already in cart');
+          //  alert('Sorry, this item is already in cart');
             return;
         }
     }
@@ -103,11 +144,9 @@ function addItem(title, price, imageSrc) {
    row.getElementsByClassName('btn-danger')[0].addEventListener('click', removeItem);
     row.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', amountChange);
 }
-function check() {
-
-}
+var e = {};
 !function (t) {
-    var e = {};
+
 
     function n(o) {
         if (e[o]) return e[o].exports;
@@ -143,7 +182,7 @@ function check() {
         return Object.prototype.hasOwnProperty.call(t, e)
     }, n.p = "", n(n.s = 0)
 }([function (t, e) {
-    var n = [], o = 1;
+
 
     function r() {
         var t = document.getElementById("products");
@@ -209,7 +248,7 @@ function check() {
 
                         document.getElementById("cartCount").innerHTML = c.length;
                         var t = document.getElementById("cartPopup");
-                      //  t.innerHTML = "";
+                      // t.innerHTML = "";
                         for (var e = 0, n = 0, o = 0; o < c.length; o++) {
                             n = null != c[o].special_price ? c[o].special_price : c[o].price, e += Number(n);
                             for (var r = !1, a = 0; a < u.length; a++) if (c[o].id === u[a].id) {
@@ -220,16 +259,21 @@ function check() {
 
                         }
                         for (var i = 0, o = 0; o < u.length; o++) {
-                            for (var l = 0, a = 0; a < c.length; a++) u[o].id === c[a].id && l++, u[o].count = l;
-                            i = null != u[o].special_price ? u[o].special_price : u[o].price,
+                            for (var l = 0, a = 0; a < c.length; a++)
+                                u[o].id === c[a].id && l++;
+                             u[o].count = l;
+                            i = null != u[o].special_price ? u[o].special_price : u[o].price;
                            //     console.log(u[o])
                            addItem(u[o].name,i,u[o].image_url);
+                           blyat();
+                            updateCartTotal();
 
                         }
                             t.innerHTML += '<div class="send"><p class="form">Your name</p>' +
-                            '<input type="text" id="name"><p class="form">Your email</p><input type="text" id="email">' +
-                            '<p class="form">Your phone number</p><input type="text" id="phone"> <br><button type="submit" ' +
+                                '<input type="text" id="name"><p class="form">Your email</p><input type="text" id="email">' +
+                                '<p class="form">Your phone number</p><input type="text" id="phone"> <br><button type="submit" ' +
                                 'class="btn red-button submit"> Submit </button> </div>'
+
                         check();
                     }()
                 },
@@ -275,19 +319,21 @@ function check() {
                 dataType: "json",
                 success: function (t) {
                     console.log(t), alert("Your order is accepted"), $("#name").val(""), $("#phone").val(""), $("#email").val(""), c = [];
-                    var e = document.getElementById("cartPopup");
-                    e.innerHTML = "Your cart is empty"
                 }
             })
         }()
     }), window.onclick = function (t) {
        // t.clientX > 500 && i()
     };
-    var c = [];
-    var u = []
-}]);
-window.addEventListener('click', function (e) {
 
+}]);
+var c = [];
+var u = [];
+
+var n = [], o = 1;
+window.addEventListener('click', function (e) {
+   // check();
+    updateCartTotal();
     var modal = document.getElementById('simpleModal');
     if(e.target===modal){
         modal.style.display = 'none';
