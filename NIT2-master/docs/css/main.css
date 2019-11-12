@@ -3,13 +3,140 @@
   background: white;
   max-width: 100%;
 }
+.section-header {
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 2.5em;
+}
+.cart-row {
+  display: flex;
+}
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
 
+.cart-row:last-child .cart-column {
+  border: none;
+}
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: #333;
+  margin-left: .5em;
+  font-size: 1.2em;
+}
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
 .wrap {
   width: 100%;
   transition: margin-left .5s;
   max-width: 100% !important;
 }
 
+.nav {
+  background-color: red;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.nav__link {
+  background-color: red;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+  color: black;
+  text-decoration: none;
+  transition: color .2s linear;
+}
+
+.nav__link:hover {
+  color: black;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.header {
+background-color: red;
+  color: black;
+  padding-top: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  font-size: 44px;
+  position: fixed;
+}
+
+.header__inner {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  background-color: red;
+  font-size: 30px;
+  font-weight: 700;
+}
 .red-button {
   background-color: red;
 }
@@ -57,7 +184,7 @@ ul{
 .cart {
   /*margin-top: 10px;*/
   /*margin-left: 10px;*/
-  top: 20px;
+
   padding-left: 30px;
   padding-right: 30px;
 }

@@ -1,3 +1,4 @@
+
 var products = [];
 var category_id = 1;
 jQuery.ajax({
@@ -206,7 +207,7 @@ function submitOrder() {
         name: name,
         phone: phone,
         email: email,
-        token: "iuf5kCfRpfkGjMna5e19"
+        token: "aaHcxyieBlPb8SQf9oBk"
     };
     //console.log(uniqueProd);
 

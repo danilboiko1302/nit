@@ -13,43 +13,25 @@
 
 </head>
 <body id="body">
-<div class="wrap" id="wrap">
-    <header class="head">
-        <div class="top">
-            <a href="index.html" style="min-width: 100%"> DO YOUR BEST </a>
-        </div>
-        <div class="row row-head text-right">
-            <div class="col-md-4 col-sm-12 media cart" style="padding-left: 100px">
-                <div class="container text-left" id="cartBtn">
-                    <a href="#"><i id="cartCount" class="fas fa-shopping-cart temp openCart">0</i></a>
+<header class="header">
+    <div class="container" style="padding-left:0px;padding-right: 0">
+        <div class="header__inner" style="background-color: red">
+            <div class="header__logo">The Witcher 3: Wild Hunt</div>
+            <nav class="nav" style="background-color: red">
+                <a class="nav__link" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Lore</a>
+                <a class="nav__link" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Games</a>
+                <a class="nav__link" href="https://www.google.com/search?q=the+witcher+3&rlz=1C1AVFC_enUA736UA736&oq=the+witcher+3&aqs=chrome..69i57j0l5.2719j0j7&sourceid=chrome&ie=UTF-8" target="_blank">About</a>
+
+            </nav>
+            <div class="col-md-4 col-sm-12 media cart" style="padding:0" style="background-color: red">
+                <div class="container text-left" style="background-color: red" id="cartBtn">
+                    <a href="#" style="background-color: red"><i id="cartCount" style="background-color: red" class="fas fa-shopping-cart temp openCart">0</i></a>
                 </div>
             </div>
-
-            <div class="col-md-4 col-sm-12 text-center logo">
-
-            </div>
-            <div class="col-md-4 col-sm-12 text-right media social-media">
-                <ul class="media">
-                    <li id="instagram">
-                        <a href="https://instagram.com/boiko.official">
-                            <i class="fab fa-instagram temp">
-                            </i>
-                        </a>
-                    </li>
-                    <li id="twitter">
-                        <a href="https://instagram.com/boiko.official">
-                            <i class="fab fa-twitter temp"></i>
-                        </a>
-                    </li>
-                    <li id="facebook">
-                        <a href="https://instagram.com/boiko.official">
-                            <i class="fab fa-facebook-f temp"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </header>
+    </div>
+</header>
+<div class="wrap" style="margin-top: 100px" id="wrap">
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -65,8 +47,20 @@
 </div>
 <div id="curtain"></div>
 <div id="simpleModal" class="modal">
-    <div
-            id="cartPopup" class="cartPopup text-center">
+
+    <div id="cartPopup" class="cartPopup text-center">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
     </div>
 
 </div>

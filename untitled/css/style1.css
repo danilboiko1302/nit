@@ -29,7 +29,8 @@ body {
 
 .cart-row:last-child .cart-column {
   border: none;
-}.cart-item {
+}
+.cart-item {
    width: 45%;
  }
 
